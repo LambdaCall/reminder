@@ -3,9 +3,6 @@ import React from 'react';
 // Styling done by tailwind
 export class Card extends React.Component {
     
-    constructor(props){
-        super(props)
-    }
 
     render() {
         return (
@@ -19,7 +16,10 @@ export class Card extends React.Component {
                 <div className="px-6 py-4">
                 {/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span> */}
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">{this.props.id}</span> */}
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={ () => this.props.delete(this.props.id)}>
+                    Delete
+                </button>
                 </div>
             </div>
             )
